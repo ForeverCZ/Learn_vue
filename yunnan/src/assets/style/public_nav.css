@@ -1,0 +1,27 @@
+/* 底部导航 */
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(211, 211, 211, 0.8);
+    padding: 0 0.4rem;
+    z-index: 9999;
+}
+
+.nav div {
+    text-align: center;
+}
+
+.nav img {
+    width: 0.5rem;
+    height: 0.5rem;
+}
+
+.nav p {
+    font-size: 0.1rem;
+    padding-top: 0.04rem;
+}
