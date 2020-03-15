@@ -6,5 +6,9 @@ export const banner = () => {
     }
     // 攻略的请求
 export const homes = () => {
-    return axios.get(api + "/homes/")
+        return axios.get(api + "/homes/")
+    }
+    // 攻略的详情页
+export const goods = (goodsId) => {
+    return axios.get(api + "/goods/" + goodsId)
 }

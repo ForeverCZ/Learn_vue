@@ -1,15 +1,19 @@
 <template>
   <div class="content-wrap">
-    <div class="content" v-for="item in homesData" v-bind:key="item.id">
-      <div class="content-img">
-        <img :src="item.image" alt />
-      </div>
-      <div class="content-text">
-        <div class="content-name">{{item.name}}</div>
-        <div class="conten-biao">
-          <p>{{item.title}}</p>
+    <div v-for="item in homesData" v-bind:key="item.id" @click="test" :id="item.id">
+      <router-link to="/Containner">
+        <div class="content">
+          <div class="content-img">
+            <img :src="item.image" alt />
+          </div>
+          <div class="content-text">
+            <div class="content-name">{{item.name}}</div>
+            <div class="conten-biao">
+              <p>{{item.title}}</p>
+            </div>
+          </div>
         </div>
-      </div>
+      </router-link>
     </div>
   </div>
 </template>
@@ -21,6 +25,11 @@ export default {
     return {
       homesData: []
     };
+  },
+  methods: {
+    test(event) {
+      console.log("测试专用:", event);
+    }
   },
   mounted() {
     homes()
@@ -66,6 +75,7 @@ export default {
   font-size: 0.3rem;
   font-weight: bold;
   line-height: 1.5;
+  color: #1c1c1c;
 }
 .conten-biao {
   position: absolute;
