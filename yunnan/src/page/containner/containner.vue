@@ -3,6 +3,8 @@
     <Covers :culum="culum" :images="images" :alubum="alubum"></Covers>
     <Revert :culum="culum"></Revert>
     <Sliding :alubum="alubum"></Sliding>
+    <Collect></Collect>
+    <Speech></Speech>
     <div style="height:10rem"></div>
   </div>
 </template>
@@ -10,6 +12,8 @@
 import Covers from "./components/covers";
 import Revert from "./components/revert";
 import Sliding from "./components/sliding";
+import Collect from "./components/collect";
+import Speech from "./components/speech";
 // 父组件引入api父传子
 import { goods } from "../../api/api";
 export default {
@@ -25,7 +29,9 @@ export default {
   components: {
     Covers,
     Revert,
-    Sliding
+    Sliding,
+    Collect,
+    Speech
   },
   mounted() {
     goods(this.productId)
