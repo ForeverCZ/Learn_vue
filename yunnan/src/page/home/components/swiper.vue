@@ -21,17 +21,7 @@ export default {
       swiperOption: {
         pagination: ".swiper-pagination",
         loop: true,
-        autoplay: 1000,
-        effect: "coverflow",
-        slidesPerView: 3,
-        centeredSlides: true,
-        coverflowEffect: {
-          rotate: 30,
-          stretch: 10,
-          depth: 20,
-          modifier: 2,
-          slideShadows: true
-        }
+        autoplay: 1000
       },
       banner: []
     };

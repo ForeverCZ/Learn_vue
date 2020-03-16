@@ -9,7 +9,8 @@
       <router-link to="/">
         <div class="header-fixed-back">
           <img src="../../../assets//image/fanhui.png" alt />
-        </div>回到首页
+        </div>
+        {{culum}}
       </router-link>
     </div>
   </div>
@@ -17,6 +18,9 @@
 <script>
 export default {
   name: "home-revert",
+  props: {
+    culum: String
+  },
   data() {
     return {
       showVet: true

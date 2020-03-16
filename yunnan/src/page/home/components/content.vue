@@ -1,6 +1,6 @@
 <template>
   <div class="content-wrap">
-    <div v-for="item in homesData" v-bind:key="item.id" @click="test" :id="item.id">
+    <div v-for="item in homesData" v-bind:key="item.id" @click="test">
       <router-link to="/Containner">
         <div class="content">
           <div class="content-img">
@@ -27,9 +27,7 @@ export default {
     };
   },
   methods: {
-    test(event) {
-      console.log("测试专用:", event);
-    }
+    
   },
   mounted() {
     homes()
