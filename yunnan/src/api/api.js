@@ -10,5 +10,9 @@ export const homes = () => {
     }
     // 攻略的详情页
 export const goods = (goodsId) => {
-    return axios.get(api + "/goods/" + goodsId)
+        return axios.get(api + "/goods/" + goodsId)
+    }
+    // 语音合成
+export const speeched = (params) => {
+    return axios.post((api + "/speech/"), params)
 }

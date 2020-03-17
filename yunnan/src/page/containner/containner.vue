@@ -4,8 +4,7 @@
     <Revert :culum="culum"></Revert>
     <Sliding :alubum="alubum"></Sliding>
     <Collect></Collect>
-    <Speech></Speech>
-    <div style="height:10rem"></div>
+    <Speech :culum="culum" :lecturer="lecturer" :goods_desc="goods_desc"></Speech>
   </div>
 </template>
 <script>
@@ -23,7 +22,9 @@ export default {
       productId: 1, //取到攻略详情页的id
       culum: "",
       images: "",
-      alubum: []
+      alubum: [],
+      lecturer:"",
+      goods_desc:''
     };
   },
   components: {
@@ -36,7 +37,7 @@ export default {
   mounted() {
     goods(this.productId)
       .then(res => {
-        console.log("获取攻略详细信息1", res.data);
+        console.log("获取攻略详细信息:", res.data);
         var data = res.data;
         //标题
         this.culum = data.curriculum;
@@ -44,6 +45,10 @@ export default {
         this.images = data.image;
         // 相册
         this.alubum = data.images;
+        //语音描述
+        this.lecturer=data.lecturer
+        // 文章
+        this.goods_desc=data.goods_desc
       })
       .catch(err => {
         console.log(err);

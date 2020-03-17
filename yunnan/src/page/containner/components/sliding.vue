@@ -18,7 +18,7 @@ import Bus from "../../../assets/bus/bus.js";
 export default {
   name: "sliding",
   props: {
-    alubum: []
+    alubum: Array
   },
   data() {
     return {

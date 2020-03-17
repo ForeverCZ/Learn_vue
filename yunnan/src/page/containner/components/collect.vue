@@ -15,16 +15,16 @@ export default {
 .collect-wrap {
   display: flex;
   justify-content: flex-end;
-  padding: 0.3rem 0.2rem 0.2rem 0;
+  padding: 0.3rem 0.1rem 0.1rem 0;
 }
 .collect {
   text-align: center;
 }
 .collect img {
-  width: 0.55rem;
+  width: 0.45rem;
 }
 .collect p {
-  line-height: 0.7rem;
-  font-size: 0.3rem;
+  line-height: 0.5rem;
+  font-size: 0.25rem;
 }
 </style>
