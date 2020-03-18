@@ -12,16 +12,19 @@ Vue.use(Router)
 export default new Router({
     mode: 'history',
     routes: [{
-        path: '/',
-        name: 'home',
-        component: home
-    }, {
-        path: '/Person',
-        name: 'person',
-        component: person
-    }, {
-        path: '/Containner',
-        name: 'containner',
-        component: containner
-    }]
+            path: '/',
+            name: 'home',
+            component: home
+        }, {
+            path: '/Person',
+            name: 'person',
+            component: person
+        },
+        // 详情页
+        {
+            path: '/Containner/:id',
+            name: 'containner',
+            component: containner
+        }
+    ]
 })

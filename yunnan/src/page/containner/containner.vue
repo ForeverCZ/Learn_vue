@@ -19,7 +19,7 @@ export default {
   name: "home-containner",
   data() {
     return {
-      productId: 1, //取到攻略详情页的id
+      productId: "", //取到攻略详情页的id
       culum: "",
       images: "",
       alubum: [],
@@ -53,6 +53,10 @@ export default {
       .catch(err => {
         console.log(err);
       });
+  },created(){
+    // 取到列表页传过来的Id值(路由跳转过来的)
+    this.productId=this.$route.params.id
+    console.log("取到列表页传过来的Id值(路由跳转过来的)",this.productId)
   }
 };
 </script>

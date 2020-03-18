@@ -41,10 +41,9 @@ export default {
     plays() {
       //var Audio = document.getElementById("myAudio")=var Audio=this.$refs.myAudio
       var Audio = this.$refs.myAudio; //相当于选区dom
-      Audio.play();
       this.play = false;
       this.pause = true;
-      console.log("我被点击了");
+      Audio.play();
     },
     pauses() {
       //var Audio = document.getElementById("myAudio")=var Audio=this.$refs.myAudio

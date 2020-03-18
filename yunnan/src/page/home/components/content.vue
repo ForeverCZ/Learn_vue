@@ -1,7 +1,7 @@
 <template>
   <div class="content-wrap">
-    <div v-for="item in homesData" v-bind:key="item.id" @click="test">
-      <router-link to="/Containner">
+    <div v-for="item in homesData" v-bind:key="item.id">
+      <router-link :to="'/Containner/' + item.id">
         <div class="content">
           <div class="content-img">
             <img :src="item.image" alt />
