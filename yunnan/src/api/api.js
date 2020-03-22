@@ -5,8 +5,8 @@ export const banner = () => {
         return axios.get(api + "/tourism")
     }
     // 攻略的请求
-export const homes = () => {
-        return axios.get(api + "/homes/")
+export const homes = (page) => {
+        return axios.get(api + "/homes/?page=" + page)
     }
     // 攻略的详情页
 export const goods = (goodsId) => {
