@@ -14,5 +14,9 @@ export const goods = (goodsId) => {
     }
     // 语音合成
 export const speeched = (params) => {
-    return axios.post((api + "/speech/"), params)
+        return axios.post((api + "/speech/"), params)
+    }
+    // 搜索
+export const searchData = (params) => {
+    return axios.get(api + "/goods/?search=" + params)
 }

@@ -2,7 +2,9 @@
   <div>
     <div class="search">
       <img src="../../../assets/image/feizhu.png" />
-      <input type="text" disabled placeholder="输入目的地、攻略、游记" />
+      <router-link to="/Search/">
+        <input type="text" disabled placeholder="输入目的地、攻略、游记" />
+      </router-link>
     </div>
   </div>
 </template>
@@ -18,11 +20,11 @@ export default {
   align-items: center;
   padding: 0 0.2rem;
 }
-.search img{
+.search img {
   width: 1.9rem;
-  height: .76rem;
+  height: 0.76rem;
 }
-.search input{
+.search input {
   margin-left: 0.05rem;
   height: 0.4rem;
   width: 95%;

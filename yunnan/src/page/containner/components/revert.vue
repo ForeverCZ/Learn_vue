@@ -1,17 +1,17 @@
 <template>
   <div>
-    <router-link to="/">
-      <div class="header-abs" v-show="showVet">
-        <img src="../../../assets//image/fanhui.png" alt />
-      </div>
-    </router-link>
+    <!-- <router-link to="/"> -->
+    <div class="header-abs" v-show="showVet">
+      <img src="../../../assets//image/fanhui.png" @click="back" alt />
+    </div>
+    <!-- </router-link> -->
     <div class="header-fixed" v-show="!showVet">
-      <router-link to="/">
-        <div class="header-fixed-back">
-          <img src="../../../assets//image/fanhui.png" alt />
-        </div>
-        {{culum}}
-      </router-link>
+      <!-- <router-link to="/"> -->
+      <div class="header-fixed-back">
+        <img src="../../../assets//image/fanhui.png" @click="back" alt />
+      </div>
+      {{culum}}
+      <!-- </router-link> -->
     </div>
   </div>
 </template>
@@ -35,6 +35,9 @@ export default {
       } else {
         this.showVet = true;
       }
+    },
+    back: function() {
+      this.$router.go(-1); //返回上一层
     }
   },
   //   滚动监听

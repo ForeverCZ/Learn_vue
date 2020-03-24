@@ -6,6 +6,8 @@ import home from '@/page/home/home.vue'
 import person from '@/page/person/person.vue'
 // 引入详情页
 import containner from '@/page/containner/containner'
+//引入搜索
+import search from '@/page/search/search'
 
 Vue.use(Router)
 
@@ -14,7 +16,10 @@ export default new Router({
     routes: [{
             path: '/',
             name: 'home',
-            component: home
+            component: home,
+            meta: {
+                keepAlive: true //该页面需要缓存
+            }
         }, {
             path: '/Person',
             name: 'person',
@@ -25,6 +30,14 @@ export default new Router({
             path: '/Containner/:id',
             name: 'containner',
             component: containner
-        }
+        },
+        {
+            path: '/Search',
+            name: 'search',
+            component: search,
+            meta: {
+                keepAlive: true //该页面需要缓存
+            }
+        },
     ]
 })
