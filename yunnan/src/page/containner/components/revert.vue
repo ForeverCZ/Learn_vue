@@ -2,12 +2,14 @@
   <div>
     <!-- <router-link to="/"> -->
     <div class="header-abs" v-show="showVet">
+      <!-- 返回上一级 @click="back"-->
       <img src="../../../assets//image/fanhui.png" @click="back" alt />
     </div>
     <!-- </router-link> -->
     <div class="header-fixed" v-show="!showVet">
       <!-- <router-link to="/"> -->
       <div class="header-fixed-back">
+        <!-- 返回上一级 @click="back"-->
         <img src="../../../assets//image/fanhui.png" @click="back" alt />
       </div>
       {{culum}}
@@ -46,7 +48,8 @@ export default {
   }
 };
 </script>
-<style lang="">
+<style lang="" scoped>
+@import "../../../assets/style/public_nav";
 .header-abs {
   position: absolute;
   left: 0.2rem;
@@ -61,35 +64,5 @@ export default {
 .header-abs img {
   width: 0.6rem;
   color: white;
-}
-.header-fixed {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 0.8rem;
-  line-height: 0.8rem;
-  text-align: center;
-  color: white;
-  background: rgba(255, 127, 36, 0.5);
-  font-size: 0.35rem;
-  z-index: 2;
-}
-.header-fixed-back {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 0.6rem;
-  width: 0.6rem;
-  text-align: center;
-  font-size: 0.4rem;
-  color: #fff;
-}
-.header-fixed-back img {
-  height: 0.6rem;
-  width: 0.6rem;
-}
-a {
-  color: #fff;
 }
 </style>

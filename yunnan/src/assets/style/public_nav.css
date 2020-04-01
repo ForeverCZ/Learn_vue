@@ -92,3 +92,40 @@
     line-height: 1rem;
     font-size: 0.3rem;
 }
+
+
+/* 登录后顶部 */
+
+.header-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 0.8rem;
+    line-height: 0.8rem;
+    text-align: center;
+    color: white;
+    background: rgba(255, 127, 36, 0.5);
+    font-size: 0.35rem;
+    z-index: 2;
+}
+
+.header-fixed-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 0.6rem;
+    width: 0.6rem;
+    text-align: center;
+    font-size: 0.4rem;
+    color: #fff;
+}
+
+.header-fixed-back img {
+    height: 0.6rem;
+    width: 0.6rem;
+}
+
+a {
+    color: #fff;
+}
