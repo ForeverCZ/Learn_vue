@@ -18,5 +18,17 @@ export const speeched = (params) => {
     }
     // 搜索
 export const searchData = (params) => {
-    return axios.get(api + "/goods/?search=" + params)
+        return axios.get(api + "/goods/?search=" + params)
+    }
+    // 发送验证码
+export const getcode = (params) => {
+        return axios.post((api + "/codes/"), params)
+    }
+    // 注册
+export const register = (params) => {
+        return axios.post((api + "/users/"), params)
+    }
+    // 登录
+export const login = (params) => {
+    return axios.post((api + "/login/"), params)
 }

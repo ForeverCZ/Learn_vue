@@ -13,12 +13,25 @@ import 'swiper/dist/css/swiper.css'
 import './assets/style/reset.css'
 Vue.config.productionTip = false
 
+//引入弹窗组件
+import popupToast from './popup/popup.js'
+// 使用它
+Vue.use(popupToast)
+
+//全局使用拦截器
+import './axios';
+import Axios from 'axios';
+Vue.prototype.$http = Axios
+
+// 引用vuex
+import store from './store/store'
 // 使用轮播
 Vue.use(VueAwesomeSwiper, /* { default global options } */ )
     /* eslint-disable no-new */
 new Vue({
     el: '#app',
     router,
+    store,
     components: {
         App
     },

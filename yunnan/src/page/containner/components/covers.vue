@@ -45,7 +45,7 @@ export default {
   methods: {
     imageSholw() {
       this.showSwiper = true;
-      // 把已经改变的showSwiper传送到csliding页面
+      // 把已经改变的showSwiper传送到sliding页面
       Bus.$emit("val", this.showSwiper);
     }
   },

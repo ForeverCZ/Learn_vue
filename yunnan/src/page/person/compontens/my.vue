@@ -2,24 +2,29 @@
   <div>
     <div class="name">
       <!-- 未登录 -->
-      <router-link to="/Login">
+      <router-link to="/Login" v-if='!this.userInfo.name'>
         <div class="btn">登录</div>
       </router-link>
       <!-- 已登陆 -->
-      <div v-show="show">
+      <div v-else>
         <img src="../../../assets/image/zhangguo.jpg" alt />
-        <p>张国荣</p>
+        <p>{{this.userInfo.name}}</p>
       </div>
     </div>
   </div>
 </template>
 <script>
+// 固定这么写
+import { mapState } from "vuex";
 export default {
   name: "my",
   data() {
     return {
       show: false
     };
+  },
+  computed: {
+    ...mapState(['userInfo'])
   }
 };
 </script>
@@ -45,9 +50,9 @@ export default {
   border-radius: 50%;
 }
 .name p {
-  margin-top: 0.1rem;
+  padding-top: 0.3rem;
   text-align: center;
-  color: #ccc;
-  font-size: 0.26rem;
+  color: wheat;
+  font-size: 0.28rem;
 }
 </style>
