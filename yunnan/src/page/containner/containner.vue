@@ -3,7 +3,7 @@
     <Covers :culum="culum" :images="images" :alubum="alubum"></Covers>
     <Revert :culum="culum"></Revert>
     <Sliding :alubum="alubum"></Sliding>
-    <Collect></Collect>
+    <Collect :productId="productId"></Collect>
     <Speech :culum="culum" :lecturer="lecturer" :goods_desc="goods_desc"></Speech>
   </div>
 </template>

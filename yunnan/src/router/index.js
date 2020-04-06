@@ -14,6 +14,8 @@ import login from '@/page/login/login'
 import loginend from '@/page/login/components/loginend.vue'
 // 注册的
 import regist from '@/page/login/components/regist.vue'
+//我的收藏
+import collection from '@/page/collect/collect.vue'
 Vue.use(Router)
 
 export default new Router({
@@ -64,6 +66,12 @@ export default new Router({
                     component: regist,
                 },
             ]
+        },
+        // 我的收藏
+        {
+            path: '/Collection/',
+            name: 'collection',
+            component: collection
         },
 
     ]

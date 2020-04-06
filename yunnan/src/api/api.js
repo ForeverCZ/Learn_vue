@@ -30,5 +30,21 @@ export const register = (params) => {
     }
     // 登录
 export const login = (params) => {
-    return axios.post((api + "/login/"), params)
+        return axios.post((api + "/login/"), params)
+    }
+    // 判断攻略是否收藏
+export const getcoll = (goodsId) => {
+        return axios.get(api + "/collect/ " + goodsId + "/")
+    }
+    // 收藏
+export const collect = (goods) => {
+        return axios.post((api + "/collect/"), goods)
+    }
+    //取消收藏
+export const delectCollect = (goods_id) => {
+        return axios.delete(api + "/collect/" + goods_id + "/")
+    }
+    //获取收藏列表
+export const listData = () => {
+    return axios.get(api + "/collect/")
 }

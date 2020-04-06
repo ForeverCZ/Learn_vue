@@ -1,6 +1,6 @@
 <template>
   <div class="business" v-if="this.userInfo.name">
-    <div>
+    <div @click="toCollect">
       <img src="../../../assets/image/myshou.png" alt />
       <p>我的收藏</p>
     </div>
@@ -25,6 +25,10 @@ export default {
       this.$store.dispatch("users");
       // 跳到首页 跳转路由
       this.$router.push({ name: "home" });
+    },
+    toCollect() {
+      // 跳转到我的收藏
+      this.$router.push({ name: "collection" });
     }
   },
   computed: {
@@ -51,7 +55,7 @@ export default {
 .business img {
   width: 25%;
 }
-.business p{
+.business p {
   color: whitesmoke;
   padding-top: 0.3rem;
 }
